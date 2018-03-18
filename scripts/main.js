@@ -20,7 +20,9 @@ module.exports = robot => {
   robot.hear(/^([^ ]+)曰く$/i, msg => {
     const teller = msg.match[1];
     Meigen.findAll({
-      teller
+      where: {
+        teller
+      }
     }).then(meigens => {
       const meigen = meigens[Math.floor(Math.random() * meigens.length)];
       msg.send(
