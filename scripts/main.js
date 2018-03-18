@@ -7,7 +7,7 @@ Meigen.sync();
 
 module.exports = robot => {
   // ヘルプ表示
-  robot.hear(/^名言ボット help/i, msg => {
+  robot.hear(/名言botの使い方/i, msg => {
     msg.send(
       '名言を言ってくれるボット。' +
       '「〇〇曰く」というと反応する。' +
