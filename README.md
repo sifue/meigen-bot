@@ -12,6 +12,15 @@ available, etc!
 [hubot]: http://hubot.github.com
 [generator-hubot]: https://github.com/github/generator-hubot
 
+### インストール方法
+
+1. GitHubからチェックアウト
+1. PostgreSQLでDB作成、デフォルトは `meigen`
+1. `bin/hubot` で動作確認。「名言bot help」でヘルプ表示
+1. DiscordでAppsとボットのトークン発行。 [https://discordapp.com/developers/applications/me](https://discordapp.com/developers/applications/me)
+1. `env HUBOT_DISCORD_TOKEN=xxxxxxxx bin/hubot -a discord` で起動
+1. サーバー運用の場合、forever をインストールして運用が便利。環境変数に `NODE_ENV=production` を追加するとSQLのログが出なくなる。
+
 ### Running meigen-bot Locally
 
 You can test your hubot by running the following, however some plugins will not
