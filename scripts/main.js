@@ -21,7 +21,8 @@ module.exports = robot => {
     const teller = msg.match[1];
     Meigen.findAll({
       where: {
-        teller
+        teller,
+	isDeleted: false
       }
     }).then(meigens => {
       const meigen = meigens[Math.floor(Math.random() * meigens.length)];
